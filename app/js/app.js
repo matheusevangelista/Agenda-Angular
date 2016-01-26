@@ -2,9 +2,9 @@
 
 /* App */
 
-var myApp = angular.module('myApp', [
+var myApp = angular.module('agendaApp', [
     'ngRoute',
-    'myAppControllers'
+    'agendaAppController'
     ]);
 
 
@@ -12,12 +12,16 @@ var myApp = angular.module('myApp', [
 myApp.config(['$routeProvider',
     function($routeProvider){
         $routeProvider.
-        when('/helloWorld', {
-            templateUrl: 'partials/helloWorld.html',
-            controller: 'HelloCtrl'
+        when('/lista', {
+            templateUrl: 'partials/list.html',
+            controller: 'ListCtrl'
+        }).
+        when('/adicionar', {
+            templateUrl: 'partials/new.html',
+            controller: 'NewCtrl'
         }).
         otherwise({
-            redirectTo: '/helloWorld'
+            redirectTo: '/lista'
         });
     }
     ]);

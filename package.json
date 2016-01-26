@@ -1,6 +1,7 @@
 {
   "name": "agenda-angular",
-  "version": "0.0.1",
+  "repository": "https://github.com/matheusevangelista/Agenda-Angular",
+  "version": "0.0.0",
   "description": "An example of agenda using Angular JS and localstorage (HTML5)",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

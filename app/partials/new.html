@@ -1,0 +1,35 @@
+<div class="container-fluid">
+    <div class="row">
+
+        <div class="col-md-12">
+            Nome: <input ng-model="nome"/>
+            Email: <input ng-model="email"/>
+            Telefone: <input ng-model="phone"/>
+
+            <input type="button" value="Adicionar" ng-click="addItem();"/>
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-12">
+                <table>
+                    <thead>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Telefone</th>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="contact in contacts | orderBy:'-id' track by $index">
+                            <td>{{ contact.name }}</td>
+                            <td>{{ contact.email }}</td>
+                            <td>{{ contact.phone }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+        </div>
+
+    </div>
+
+</div>

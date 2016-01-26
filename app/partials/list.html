@@ -1,0 +1,30 @@
+<div class="container-fluid">
+    <div class="row">
+
+        <div class="col-md-12">
+            Busca: <input ng-model="query"/>
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-12">
+                <table>
+                    <thead>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Telefone</th>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="contact in contacts | filter: query | orderBy:'name' track by $index">
+                            <td>{{ contact.name }}</td>
+                            <td>{{ contact.email }}</td>
+                            <td>{{ contact.phone }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+        </div>
+
+    </div>
+</div>

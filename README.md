@@ -2,6 +2,8 @@
 
 An example of agenda using Angular JS and localstorage (HTML5)
 
+<img src="https://angularjs.org/img/AngularJS-large.png" height="80">
+
 ## Prerequisites
 
 ### Git
@@ -15,14 +17,13 @@ An example of agenda using Angular JS and localstorage (HTML5)
 - Install the tool dependencies (`npm install --no-bin-links`).
 - Install the bower dependencies ('bower install [if you are root, add this command '--allow-root']')
 
-## Development with angular-phonecat
+## Development with agenda-angular
 
 The following docs describe how you can test and develop further this application.
 
 ### Installing dependencies
 
-The application relies upon various node.js tools, such as Bower, Karma and Protractor.  You can
-install these by running:
+The application relies upon various node.js tools.  You can install these by running:
 
 ```
 npm install --no-bin-links
