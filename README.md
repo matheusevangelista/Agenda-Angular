@@ -12,7 +12,8 @@ An example of agenda using Angular JS and localstorage (HTML5)
 ### Node.js and Tools
 
 - Get [Node.js][node-download].
-- Install the tool dependencies (`npm install`).
+- Install the tool dependencies (`npm install --no-bin-links`).
+- Install the bower dependencies ('bower install [if you are root, add this command '--allow-root']')
 
 ## Development with angular-phonecat
 
@@ -24,7 +25,7 @@ The application relies upon various node.js tools, such as Bower, Karma and Prot
 install these by running:
 
 ```
-npm install
+npm install --no-bin-links
 ```
 
 This will also run bower, which will download the angular files needed for the current step of the

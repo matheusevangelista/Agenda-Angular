@@ -1,0 +1,17 @@
+{
+  "name": "agenda-angular",
+  "description": "An example of agenda using Angular JS and localstorage (HTML5)",
+  "authors": [
+    "Matheus Evangelista"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/matheusevangelista/Agenda-Angular",
+  "private": true,
+  "dependencies": {
+    "angular": "1.4.x",
+    "jquery": "~2.1.1",
+    "bootstrap": "~3.1.1",
+    "angular-route": "1.4.x",
+    "angular-resource": "1.4.x"
+  }
+}
