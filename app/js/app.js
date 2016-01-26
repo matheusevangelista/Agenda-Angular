@@ -20,6 +20,10 @@ myApp.config(['$routeProvider',
             templateUrl: 'partials/new.html',
             controller: 'NewCtrl'
         }).
+        when('/editar/:contactId', {
+            templateUrl: 'partials/edit.html',
+            controller: 'EditCtrl'
+        }).
         otherwise({
             redirectTo: '/lista'
         });

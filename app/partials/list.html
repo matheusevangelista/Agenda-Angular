@@ -15,12 +15,14 @@
                         <th>Nome</th>
                         <th>Email</th>
                         <th>Telefone</th>
+                        <th></th>
                     </thead>
                     <tbody>
                         <tr ng-repeat="contact in contacts | filter: query | orderBy:'name' track by $index">
                             <td>{{ contact.name }}</td>
                             <td>{{ contact.email }}</td>
                             <td>{{ contact.phone }}</td>
+                            <td><a href="#/editar/{{ contact.id }}"><input type="button" value="Editar"/></a> <input type="button" value="Remover" ng-click="removeItem($index);"/></td>
                         </tr>
                     </tbody>
                 </table>

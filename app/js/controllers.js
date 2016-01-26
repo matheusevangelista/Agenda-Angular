@@ -18,6 +18,13 @@ agendaAppController.controller('ListCtrl', function($scope){
         localStorage.setItem('contacts', '');
     }
 
+    $scope.removeItem = function(index){
+        $scope.contacts.splice(index, 1);
+        localStorage.setItem('contacts', ''+JSON.stringify($scope.contacts));
+
+        console.log(JSON.stringify($scope.contacts));
+    }
+
 
 
 
@@ -25,9 +32,9 @@ agendaAppController.controller('ListCtrl', function($scope){
 
 agendaAppController.controller('NewCtrl', function($scope){
 
-    // $scope.name = "";
-    // $scope.email = "";
-    // $scope.phone = "";
+    $scope.nome = "";
+    $scope.email = "";
+    $scope.phone = "";
 
     /*** code ***/
 
@@ -64,6 +71,44 @@ agendaAppController.controller('NewCtrl', function($scope){
 
         console.log(JSON.stringify($scope.contacts));
 
+    }
+
+
+});
+
+agendaAppController.controller('EditCtrl', function($scope, $routeParams, $location){
+
+    $scope.editContact = "";
+
+    if(window.localStorage.getItem("contacts")){
+
+        $scope.contacts = angular.fromJson(localStorage.getItem('contacts'));
+        console.log(localStorage.getItem('contacts'));
+
+    }else{
+        $scope.contacts = [];
+        localStorage.setItem('contacts', '');
+    }
+
+    $scope.editContact = $scope.contacts[$routeParams.contactId-1];
+
+    console.log($scope.editContact);
+
+    $scope.saveItem = function(){
+
+        var editedContact = {
+            id : $routeParams.contactId,
+            name : $scope.editContact.name,
+            email : $scope.editContact.email,
+            phone : $scope.editContact.phone
+        };
+
+        $scope.contacts[$routeParams.contactId-1] = editedContact;
+        localStorage.setItem('contacts', ''+JSON.stringify($scope.contacts));
+
+        console.log(editedContact);
+
+        $location.path( "/lista" );
     }
 
 
